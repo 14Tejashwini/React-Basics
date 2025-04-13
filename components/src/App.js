@@ -15,6 +15,10 @@ import UseEffectHook1 from './useEffect/UseEffectHook1';
 import UseEffectHook2 from './useEffect/UseEffectHook2';
 import Fetching from './useEffect/Fetching';
 import Fetching2 from './useEffect/Fetching2';
+import ComponentA from './useContext/ComponentA';
+import React from 'react';
+
+export const userContext = React.createContext()
 
 function App() {
   return (
@@ -38,7 +42,10 @@ function App() {
       {/* <UseEffectHook1></UseEffectHook1> */}
       {/* <UseEffectHook2></UseEffectHook2> */}
       {/* <Fetching></Fetching> */}
-      <Fetching2></Fetching2>
+      {/* <Fetching2></Fetching2> */}
+      <userContext.Provider value={'teju'}>
+        <ComponentA></ComponentA>
+      </userContext.Provider>
     </div>
   );
 }
